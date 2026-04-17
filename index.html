@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>F7ine | Соцсети</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #1a1e2b 0%, #2d2a3e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 48px;
+            padding: 32px 24px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .avatar {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .avatar-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            background-size: cover;
+            background-position: center;
+            background-image: url('https://s10.iimage.su/s/17/gW2uIuZxyu0Lb6d1s5rqUyAKqsMjpTzXVkWn87QV8.jpg');
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin-bottom: 8px;
+        }
+
+        .bio {
+            color: #cbc3e6;
+            font-size: 16px;
+            margin-bottom: 32px;
+            text-align: center;
+            min-height: 24px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            padding: 16px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            transition: transform 0.2s, background 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .link-card:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .link-card:active {
+            transform: scale(0.98);
+        }
+
+        .icon {
+            font-size: 32px;
+            width: 44px;
+            text-align: center;
+        }
+
+        .link-text {
+            flex: 1;
+        }
+
+        .arrow {
+            font-size: 22px;
+            opacity: 0.7;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .link-card:hover .arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        .twitch:hover { background: #9146ff; border-color: #b77cff; }
+        .instagram:hover { background: #d62976; border-color: #ff7eb3; }
+        .telegram:hover { background: #26A5E4; border-color: #6fc8ff; }
+        .youtube:hover { background: #FF0000; border-color: #ff5e5e; }
+
+        footer {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 13px;
+            color: #9b94b0;
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 24px 16px; }
+            .link-card { padding: 12px 16px; font-size: 16px; }
+            .icon { font-size: 28px; width: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="avatar">
+        <div class="avatar-circle"></div>
+        <h1>F7ine</h1>
+        <div class="bio"></div>
+    </div>
+
+    <div class="links">
+        <a href="https://m.twitch.tv/f7ine" class="link-card twitch" target="_blank" rel="noopener noreferrer">
+            <span class="icon">🎮</span>
+            <span class="link-text">Twitch</span>
+            <span class="arrow">→</span>
+        </a>
+        <a href="https://www.instagram.com/f7inee" class="link-card instagram" target="_blank" rel="noopener noreferrer">
+            <span class="icon">📸</span>
+            <span class="link-text">Instagram</span>
+            <span class="arrow">→</span>
+        </a>
+        <a href="https://t.me/F7ine" class="link-card telegram" target="_blank" rel="noopener noreferrer">
+            <span class="icon">✈️</span>
+            <span class="link-text">Telegram</span>
+            <span class="arrow">→</span>
+        </a>
+        <a href="https://youtube.com/@f7ine?si=5QB_cOtpMjXpLj7P" class="link-card youtube" target="_blank" rel="noopener noreferrer">
+            <span class="icon">📺</span>
+            <span class="link-text">YouTube</span>
+            <span class="arrow">→</span>
+        </a>
+    </div>
+
+    <footer>👆 нажмите на любую кнопку — перейдёте сразу</footer>
+</div>
+
+</body>
+</html>
